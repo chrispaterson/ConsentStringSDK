@@ -1,4 +1,4 @@
-# Consent String SDK
+# Consent String SDK for Javascript
 
 # Terms
 
