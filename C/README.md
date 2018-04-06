@@ -164,11 +164,23 @@ The primary use case of a server-side implementation is to read values of the co
    </td>
   </tr>
   <tr>
-   <td colspan="2" ><strong><code>bool cnssdk_has_consent( CNSSDK_HANDLE * handle, int32_t vendorId );</code></strong>
+   <td colspan="2" ><strong><code>bool cnssdk_is_purpose_allowed(CNSSDK_HANDLE * handle, int32_t purpose_id);</code></strong>
    </td>
   </tr>
   <tr>
-   <td>Whether or not a vendorId has consent or not.
+   <td>Get a pointer to the purposes allowed array.
+   </td>
+   <td><strong><code>@param handle</code></strong>
+<strong><code>@param purpose_id - int id of the purpose</code></strong>
+<strong><code>@return bool value of whether or not that purpose is allowed (true) or not (false)</code></strong>
+   </td>
+  </tr>
+  <tr>
+   <td colspan="2" ><strong><code>bool cnssdk_is_vendor_allowed( CNSSDK_HANDLE * handle, int32_t vendorId );</code></strong>
+   </td>
+  </tr>
+  <tr>
+   <td>For determining if the vendor consent value bit is turned on or off for a particular vendor id.
    </td>
    <td><strong><code>@param handle</code></strong>
 <strong><code>@param vendorId that we are checking for consent value</code></strong>
@@ -176,6 +188,3 @@ The primary use case of a server-side implementation is to read values of the co
    </td>
   </tr>
 </table>
-
-
-

@@ -141,13 +141,49 @@ The primary purpose of the Javascript CMP would be client-side CMPs.  This could
    </td>
   </tr>
   <tr>
+   <td><strong><code>getCmpId()</code></strong>
+   </td>
+   <td>
+   </td>
+  </tr>
+  <tr>
+   <td>Get the ID of the CMP from the consent string
+   </td>
+   <td><strong><code>@return CMP id</code></strong>
+   </td>
+  </tr>
+  <tr>
+   <td><strong><code>setCmpVersion( version )</code></strong>
+   </td>
+   <td>
+   </td>
+  </tr>
+  <tr>
+   <td>Sets the version of the CMP code that created or updated the consent string
+   </td>
+   <td><strong><code>@param version CMP version</code></strong>
+   </td>
+  </tr>
+  <tr>
+   <td><strong><code>getCmpVersion()</code></strong>
+   </td>
+   <td>
+   </td>
+  </tr>
+  <tr>
+   <td>The version of the CMP code that created or updated the consent string
+   </td>
+   <td><strong><code>@return version CMP version</code></strong>
+   </td>
+  </tr>
+  <tr>
    <td><strong><code>setConsentScreen( screenId )</code></strong>
    </td>
    <td>
    </td>
   </tr>
   <tr>
-   <td>Sets the consent screen id.  The screen number is CMP and CmpVersion specific, and is for logging proof of consent
+   <td>Sets the consent screen id.  The screen number is CMP and CMP Version specific, and is for logging proof of consent
 <p>
 					
    </td>
@@ -228,7 +264,7 @@ The primary purpose of the Javascript CMP would be client-side CMPs.  This could
    </td>
   </tr>
   <tr>
-   <td><strong><code>getPurposeAllowed( purposeId )</code></strong>
+   <td><strong><code>isPurposeAllowed( purposeId )</code></strong>
    </td>
    <td>
    </td>
@@ -241,7 +277,7 @@ The primary purpose of the Javascript CMP would be client-side CMPs.  This could
    </td>
   </tr>
   <tr>
-   <td><strong><code>setConsent( vendorId, valueBool )</code></strong>
+   <td><strong><code>setVendorAllowed( vendorId, valueBool )</code></strong>
    </td>
    <td>
    </td>
@@ -249,20 +285,20 @@ The primary purpose of the Javascript CMP would be client-side CMPs.  This could
   <tr>
    <td>Sets consent value for a vendor id
    </td>
-   <td><strong><code>@param vendorId vendor id to set consent value for</code></strong>
-<strong><code>@param value the boolean value to set the consent to</code></strong>
+   <td><strong><code>@param vendorId - vendor id to set consent value for</code></strong>
+<strong><code>@param value - the boolean value to set the consent to</code></strong>
    </td>
   </tr>
   <tr>
-   <td><strong><code>hasConsent( vendorId )</code></strong>
+   <td><strong><code>isVendorAllowed( vendorId )</code></strong>
    </td>
    <td>
    </td>
   </tr>
   <tr>
-   <td>Returns whether or not a vendorId has consent or not.  Read either from what was set in <code>setConsent</code> or whatever was previously set by the initializing string.
+   <td>For determining if the vendor consent value bit is turned on or off for a particular vendor id.
    </td>
-   <td><strong><code>@param vendorId vendor id to get the consent value for</code></strong>
+   <td><strong><code>@param vendorId vendor id to see if consent is allowed for</code></strong>
 <strong><code>@return boolean value of consent for that vendor id</code></strong>
    </td>
   </tr>

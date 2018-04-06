@@ -151,7 +151,7 @@ The primary use case of a server-side implementation is to read values of the co
    </td>
   </tr>
   <tr>
-   <td><strong><code>purpose_allowed( purpose_id );</code></strong>
+   <td><strong><code>is_purpose_allowed( purpose_id );</code></strong>
    </td>
    <td>
    </td>
@@ -164,13 +164,13 @@ The primary use case of a server-side implementation is to read values of the co
    </td>
   </tr>
   <tr>
-   <td><strong><code>has_consent( vendor_id );</code></strong>
+   <td><strong><code>is_vendor_allowed( vendor_id );</code></strong>
    </td>
    <td>
    </td>
   </tr>
   <tr>
-   <td>Whether a particular vendor by vendor id has consent or not
+   <td>For determining if the vendor consent value bit is turned on or off for a particular vendor id.
    </td>
    <td><strong><code>@param vendor_id specified by the IAB's global vendor list</code></strong>
 <strong><code>@return true is consent</code></strong>
